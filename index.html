@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="img_section">
+                <div class="default_info">
+                    <h2 class="default_day"></h2>
+                    <span class="default_date"></span>
+                    <span class="current_time"></span>
+                    <h1 class="location_name"></h1>
+                    <div class="weather_icon">
+                        <img src="" alt="weather icon" class="weather_img">
+                        <h2 class="weather_temp"></h2>
+                        <h3 class="cloudtxt"></h3>
+                        <div class="feels_like"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="content_section">
+                <form class="search_form">
+                    <input 
+                        type="text" 
+                        placeholder="Search city..." 
+                        class="input_field"
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="btn_search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button type="button" class="btn_location" title="Get current location">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </button>
+                </form>
+                <div class="loading_spinner hidden">
+                    <div class="spinner"></div>
+                </div>
+                <div class="error_message hidden">
+                    City not found. Please try again.
+                </div>
+                <div class="weather_details">
+                    <div class="detail_item">
+                        <i class="fas fa-temperature-high"></i>
+                        <div>
+                            <p class="title">FEELS LIKE</p>
+                            <span class="value feels_like_temp"></span>
+                        </div>
+                    </div>
+                    <div class="detail_item">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <p class="title">HUMIDITY</p>
+                            <span class="value humidity"></span>
+                        </div>
+                    </div>
+                    <div class="detail_item">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p class="title">WIND</p>
+                            <span class="value wind_speed"></span>
+                        </div>
+                    </div>
+                    <div class="detail_item">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <div>
+                            <p class="title">PRESSURE</p>
+                            <span class="value pressure"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="forecast_container">
+                    <h3>5-DAY FORECAST</h3>
+                    <div class="forecast_list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
